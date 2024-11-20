@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>XD Magazine</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Poppins:wght@400;600&family=Oswald&display=swap" rel="stylesheet">
+  <style>
+    /* General Styles */
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #111;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+
+    /* Header */
+    header {
+      background-color: #ff6600; /* Orange */
+      padding: 2em 0;
+      text-align: center;
+      color: white;
+      position: relative;
+    }
+
+    header h1 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 3.5em;
+      margin: 0;
+    }
+
+    header p {
+      font-size: 1.2em;
+      font-weight: 600;
+      margin-top: 0.5em;
+    }
+
+    /* Navigation */
+    nav {
+      background-color: #222;
+      display: flex;
+      justify-content: center;
+      padding: 1em 0;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 1.5em;
+      font-weight: 600;
+      font-size: 1.1em;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ff6600;
+    }
+
+    /* Section Styles */
+    section {
+      padding: 3em 2em;
+      text-align: center;
+      background-color: #222;
+      margin: 2em 0;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    section h2 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 2.5em;
+      color: #ff6600;
+      margin-bottom: 1em;
+    }
+
+    /* Subtopics Section */
+    .subtopics {
+      display: flex;
+      justify-content: center;
+      margin-top: 3em;
+      gap: 2em;
+      flex-wrap: wrap;
+    }
+
+    .subtopic {
+      background-color: #333;
+      color: #ff6600;
+      margin: 1em;
+      padding: 2em;
+      width: 30%;
+      text-align: center;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .subtopic:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    }
+
+    .subtopic-img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 1em;
+    }
+
+    .subtopic h3 {
+      font-family: 'Oswald', sans-serif;
+      font-size: 1.8em;
+      color: #ff6600;
+      margin-bottom: 0.5em;
+    }
+
+    .subtopic p {
+      font-size: 1.2em;
+      color: #fff;
+      font-weight: 400;
+    }
+
+    /* Article Section (Hidden by default) */
+    .article {
+      display: none;
+      text-align: left;
+      margin-top: 1em;
+      padding: 1em;
+      background-color: #333;
+      border-radius: 8px;
+    }
+
+    .article h4 {
+      font-size: 2em;
+      color: #ff6600;
+      margin-bottom: 1em;
+    }
+
+    .article p {
+      font-size: 1.1em;
+      line-height: 1.8;
+      color: #fff;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #222;
+      text-align: center;
+      padding: 1em 0;
+      color: white;
+    }
+
+    footer p {
+      margin: 0;
+      font-size: 1em;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>XD Magazine</h1>
+    <p>"Think Outside the Site" - Engaging Filipino Stories</p>
+  </header>
+
+  <!-- Navigation -->
+  <nav>
+    <a href="#about">About</a>
+    <a href="#mission">Mission & Vision</a>
+    <a href="#forum">Forum</a>
+    <a href="#feedback">Feedback</a>
+  </nav>
+
+  <!-- Main Content -->
+  <main>
+    <!-- About Section -->
+    <section id="about">
+      <h2>About XD Magazine</h2>
+      <p>XD Magazine shares captivating Filipino stories that highlight challenges and triumphs in Filipino culture. We aim to inform, entertain, and connect a global audience through powerful narratives.</p>
+    </section>
+
+    <!-- Mission & Vision Section -->
+    <section id="mission">
+      <h2>Mission & Vision</h2>
+      <div class="grid-container">
+        <div class="grid-item">
+          <h3>Mission</h3>
+          <p>Our mission is to create a platform that ignites passion through Filipino storytelling and connects a global audience to Filipino experiences.</p>
+        </div>
+        <div class="grid-item">
+          <h3>Vision</h3>
+          <p>We envision XD Magazine as the leading digital platform for Filipino culture, offering a space to explore, enjoy, and share stories that connect us all.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Subtopics Section -->
+    <section id="subtopics" class="subtopics">
+      <div class="subtopic" onclick="toggleArticle('feelings')">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Emotion_Icons.svg" alt="Feelings" class="subtopic-img">
+        <h3>Feelings</h3>
+        <p>Explore deep narratives around emotions and human connections in Filipino culture.</p>
+        <div id="feelings" class="article">
+          <h4>Feelings: Understanding Filipino Emotions</h4>
+          <p>Filipino culture is deeply rooted in emotional connections. Feelings are not just expressions; they reflect the social fabric that binds Filipinos. From the joy of family reunions to the collective grief of historical tragedies, emotions are a crucial part of our identity...</p>
+        </div>
+      </div>
+
+      <div class="subtopic" onclick="toggleArticle('history')">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Flag_of_the_Philippines.svg" alt="History" class="subtopic-img">
+        <h3>History</h3>
+        <p>Dive into historical events and stories that have shaped the Filipino identity.</p>
+        <div id="history" class="article">
+          <h4>History: The Filipino Journey</h4>
+          <p>History has played a significant role in shaping the Philippines into what it is today. From the Spanish colonization to the revolution against the Japanese forces, Filipino history tells stories of courage, resilience, and hope for a better future...</p>
+        </div>
+      </div>
+
+      <div class="subtopic" onclick="toggleArticle('comedy')">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/Comedian_%28Icon%29.svg/1024px-Comedian_%28Icon%29.svg.png" alt="Comedy" class="subtopic-img">
+        <h3>Comedy</h3>
+        <p>Enjoy the lighthearted, humorous side of Filipino culture through relatable comedy pieces.</p>
+        <div id="comedy" class="article">
+          <h4>Comedy: The Heart of Filipino Humor</h4>
+          <p>Filipino humor is unique. It’s born out of a deep sense of community, often using wit and charm to cope with life's difficulties. Filipino comedians have become internationally renowned for their ability to bring joy to any situation, often through satire and mimicry...</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 XD Magazine | "Think Outside the Site" | All Rights Reserved</p>
+  </footer>
+
+  <script>
+    function toggleArticle(subtopic) {
+      const article = document.getElementById(subtopic);
+      if (article.style.display === 'block') {
+        article.style.display = 'none';
+      } else {
+        article.style.display = 'block';
+      }
+    }
+  </script>
+
+</body>
+</html>
